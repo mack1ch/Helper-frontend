@@ -9,10 +9,16 @@ import { uid } from "uid";
 
 export default function Home() {
   const [cookies, setCookie] = useCookies(["user-id"]);
+  const isDevMode = process.env.NODE_ENV !== "production";
   useEffect(() => {
     if (cookies["user-id"]) {
     } else {
-      setCookie("user-id", uid(16));
+      setCookie("user-id", uid(16), {
+        domain: isDevMode
+          ? process.env.DEV_MODAL_LINK
+          : process.env.PRODUCTION_MODAL_LINK,
+        sameSite: "none",
+      });
     }
   }, []);
   return (
