@@ -12,7 +12,9 @@ export default function Home() {
   useEffect(() => {
     if (cookies["user-id"]) {
     } else {
-      setCookie("user-id", uid(16));
+      setCookie("user-id", uid(16), {
+        domain: "https://helper-modal.vercel.app/",
+      });
     }
   }, []);
   return (
