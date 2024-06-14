@@ -14,7 +14,7 @@ export default function Home() {
     if (cookies["user-id"]) {
     } else {
       setCookie("user-id", uid(16), {
-        sameSite: "none",
+        secure: true,
       });
     }
   }, []);
