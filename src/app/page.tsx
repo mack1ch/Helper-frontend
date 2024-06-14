@@ -13,7 +13,7 @@ export default function Home() {
     if (cookies["user-id"]) {
     } else {
       setCookie("user-id", uid(16), {
-        domain: "https://helper-modal.vercel.app/",
+        domain: "https://helper-frontend.vercel.app/",
       });
     }
   }, []);
