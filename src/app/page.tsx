@@ -18,6 +18,7 @@ export default function Home() {
           ? process.env.DEV_MODAL_LINK
           : process.env.PRODUCTION_MODAL_LINK,
         sameSite: "none",
+        secure: true,
       });
     }
   }, []);
