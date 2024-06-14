@@ -17,6 +17,7 @@ export const HelperModal = ({ isModalOpen }: { isModalOpen: boolean }) => {
             marginBottom: "16px",
             borderRadius: "inherit",
           }}
+          
           allow="clipboard-read; clipboard-write; display-capture"
           id="techHelp"
           src={
