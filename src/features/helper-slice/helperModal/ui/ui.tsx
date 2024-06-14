@@ -5,7 +5,7 @@ export const HelperModal = ({ isModalOpen }: { isModalOpen: boolean }) => {
   return (
     <>
       <div
-        style={{ opacity: isModalOpen ? 1 : 0 }}
+        style={{ display: isModalOpen ? "block" : "none" }}
         className={styles.modalWrap}
       >
         <iframe
@@ -17,7 +17,6 @@ export const HelperModal = ({ isModalOpen }: { isModalOpen: boolean }) => {
             marginBottom: "16px",
             borderRadius: "inherit",
           }}
-          
           allow="clipboard-read; clipboard-write; display-capture"
           id="techHelp"
           src={
