@@ -14,9 +14,6 @@ export default function Home() {
     if (cookies["user-id"]) {
     } else {
       setCookie("user-id", uid(16), {
-        domain: isDevMode
-          ? process.env.DEV_MODAL_LINK
-          : process.env.PRODUCTION_MODAL_LINK,
         sameSite: "none",
         secure: true,
       });
